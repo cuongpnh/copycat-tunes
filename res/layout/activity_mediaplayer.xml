@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/llPlayerButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0.0dip"
+        android:gravity="center" >
+
+        <!-- <ImageButton -->
+        <!-- android:id="@+id/ibShuffle" -->
+        <!-- android:layout_width="0dp" -->
+        <!-- android:layout_height="match_parent" -->
+        <!-- android:layout_weight="1" -->
+        <!-- android:contentDescription="@string/app_name" -->
+        <!-- android:src="@drawable/ic_action_shuffle" /> -->
+
+
+        <!-- <ImageButton -->
+        <!-- android:id="@+id/ibPrevious" -->
+        <!-- android:layout_width="0dp" -->
+        <!-- android:layout_height="match_parent" -->
+        <!-- android:layout_weight="1" -->
+        <!-- android:contentDescription="@string/app_name" -->
+        <!-- android:src="@android:drawable/ic_media_previous" /> -->
+
+
+        <!-- <ImageButton -->
+        <!-- android:id="@+id/ibStop" -->
+        <!-- android:layout_width="0dp" -->
+        <!-- android:layout_height="match_parent" -->
+        <!-- android:layout_weight="1" -->
+        <!-- android:contentDescription="@string/app_name" -->
+        <!-- android:src="@drawable/ic_action_stop" /> -->
+
+
+        <!-- <ImageButton -->
+        <!-- android:id="@+id/ibPlay" -->
+        <!-- android:layout_width="0dp" -->
+        <!-- android:layout_height="match_parent" -->
+        <!-- android:layout_weight="1" -->
+        <!-- android:contentDescription="@string/app_name" -->
+        <!-- android:src="@drawable/ic_player_play" /> -->
+
+
+        <!-- <ImageButton -->
+        <!-- android:id="@+id/ibNext" -->
+        <!-- android:layout_width="0dp" -->
+        <!-- android:layout_height="match_parent" -->
+        <!-- android:layout_weight="1" -->
+        <!-- android:contentDescription="@string/app_name" -->
+        <!-- android:src="@android:drawable/ic_media_next" /> -->
+
+
+        <!-- <ImageButton -->
+        <!-- android:id="@+id/ibRepeat" -->
+        <!-- android:layout_width="0dp" -->
+        <!-- android:layout_height="match_parent" -->
+        <!-- android:layout_weight="1" -->
+        <!-- android:contentDescription="@string/app_name" -->
+        <!-- android:src="@drawable/ic_action_repeat" /> -->
+
+        <ImageButton
+            android:id="@+id/ibShuffle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:padding="15.0dip"
+            android:src="@drawable/np_shuffle_selector" />
+
+        <ImageButton
+            android:id="@+id/ibPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_player_prev" />
+
+        <ImageButton
+            android:id="@+id/ibPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-5.0dip"
+            android:layout_marginRight="-5.0dip"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_player_play" />
+
+        <ImageButton
+            android:id="@+id/ibNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_player_next" />
+
+        <ImageButton
+            android:id="@+id/ibRepeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:padding="15.0dip"
+            android:src="@drawable/ic_player_repeat_off" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llPlayerButton" >
+
+        <TextView
+            android:id="@+id/tvDurationStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/inital_Time"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <SeekBar
+            android:id="@+id/sbDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tvDurationEndTime"
+            android:layout_toRightOf="@+id/tvDurationStartTime" />
+
+        <TextView
+            android:id="@+id/tvDurationEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/inital_Time"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvNowPlaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/hello_world"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvSongTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvNowPlaying"
+        android:layout_alignParentRight="true"
+        android:text="@string/app_name" />
+
+    <ListView
+        android:id="@+id/lvSong"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlDuration"
+        android:layout_below="@+id/tvNowPlaying"
+        android:layout_marginTop="5dp" >
+    </ListView>
+
+</RelativeLayout>

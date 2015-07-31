@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="128.0dip" >
+
+    <ImageView
+        android:contentDescription="@string/app_name"
+        android:id="@+id/img_cover"
+        android:layout_width="128.0dip"
+        android:layout_height="128.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/img_cover"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:contentDescription="@string/app_name"
+            android:id="@+id/ivPrevSongBig"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/selector_notif"
+            android:padding="5.0dip"
+            android:src="@drawable/ic_notif_prev" />
+
+        <ImageButton
+            android:contentDescription="@string/app_name"
+            android:id="@+id/ivPlayPauseSongBig"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/selector_notif"
+            android:padding="5.0dip"
+            android:src="@drawable/ic_notif_pause" />
+
+        <ImageButton
+            android:contentDescription="@string/app_name"
+            android:id="@+id/ivNextSongBig"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/selector_notif"
+            android:padding="5.0dip"
+            android:src="@drawable/ic_notif_next" />
+
+        <ImageView
+            android:contentDescription="@string/app_name"
+            android:layout_width="1.0px"
+            android:layout_height="32.0dip"
+            android:background="?android:dividerHorizontal" />
+
+        <ImageButton
+            android:contentDescription="@string/app_name"
+            android:id="@+id/ivStopSongBig"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.7"
+            android:background="@drawable/selector_notif"
+            android:paddingBottom="19.0dip"
+            android:paddingTop="19.0dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_notif_close_mtrl"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <ImageView
+        android:contentDescription="@string/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="1.0px"
+        android:layout_above="@+id/buttons"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/img_cover"
+        android:background="?android:dividerHorizontal" />
+
+    <LinearLayout
+        android:id="@+id/textarea"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical"
+        android:layout_toRightOf="@+id/img_cover"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_list"
+        android:paddingTop="8.0dip" >
+
+        <TextView
+            android:id="@+id/tvCustomNotificationBigTitle"
+            style="@android:style/TextAppearance.Material.Notification.Title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:ellipsize="end"
+            android:fadingEdge="horizontal"
+            android:focusable="true"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tvCustomNotificationBigContent"
+            style="@android:style/TextAppearance.Material.Notification"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:ellipsize="end"
+            android:fadingEdge="horizontal"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </LinearLayout>
+
+</RelativeLayout>

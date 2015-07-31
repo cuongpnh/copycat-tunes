@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_centerVertical="true"
+    android:padding="@dimen/widget_margin" >
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/widget_bg"
+        android:padding="@dimen/margin_widget"
+        android:paddingBottom="25.0dip"
+        android:paddingTop="25.0dip" >
+
+        <TextView
+            android:id="@+id/tvWidgetNoSongSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/ic_launcher"
+            android:drawablePadding="15.0dip"
+            android:fadingEdge="horizontal"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:maxLines="3"
+            android:text="@string/no_song_selected"
+            android:textColor="@color/widget_text_title"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+</FrameLayout>

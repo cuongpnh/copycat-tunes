@@ -1,0 +1,13 @@
+04-03-2015 20:53 [SOLVED]
+- Clear recent app => widget, notification view's event not work anymore => Maybe because pending intent? Should we clear pending intent list before create new one? But how?
+	+ Solved: change return START_STICKY => START_REDELIVER_INTENT + store song info to local app? Maybe shared pref? (OR) you can get a default song list if song list is empty
+	
+04-03-2015 21:22 [SOLVED]
+- After gaining focus again, the media button in lock-screen is disappear
+	+ Solved at 04-03-2015 21:43 => Initialize media button in lock-screen again in method onGainedAudioFocus(MediaPlayerService)
+	
+05-03-2015 12:41 [SOLVED]
+- Cant't udpate shuffle and repeat in widget when pause song
+
+05-03-2015 13:17 
+- Can play when press prev or next button in widget after remove from recent app (You can only play when press play/pause button)

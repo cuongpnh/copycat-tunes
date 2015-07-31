@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_widget">10.0dip</dimen>
+    <dimen name="widget_margin">0.0dip</dimen>
+    <dimen name="widget_small_min_height">40.0dip</dimen>
+    <dimen name="widget_min_height">110.0dip</dimen>
+    <dimen name="widget_small_min_width">250.0dip</dimen>
+    <dimen name="widget_min_width">250.0dip</dimen>
+</resources>

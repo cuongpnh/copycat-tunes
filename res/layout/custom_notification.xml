@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/ivSongDisplay"
+        android:layout_width="64.0dip"
+        android:layout_height="64.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="false"
+        android:contentDescription="@string/app_name"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_notif_thumb" />
+
+    <ImageView
+        android:id="@+id/ivStopSong"
+        android:layout_width="wrap_content"
+        android:layout_height="64.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+       
+        android:background="@drawable/selector"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_notif_close" />
+
+    <ImageView
+        android:id="@+id/ivPlayPauseSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/ivNextSong"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/pb_pause_selector" />
+
+    <ImageView
+        android:id="@+id/ivNextSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5.0dip"
+        android:layout_toLeftOf="@+id/ivStopSong"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/pb_next_selector" />
+
+    <ProgressBar
+        android:id="@+id/loadingView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivPlayPauseSong"
+        android:layout_alignLeft="@+id/ivPlayPauseSong"
+        android:layout_alignRight="@+id/ivPlayPauseSong"
+        android:layout_alignTop="@+id/ivPlayPauseSong"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvCustomNotificationTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ivSongDisplay"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="5.0dip"
+        android:layout_marginTop="12.0dip"
+        android:layout_toLeftOf="@+id/ivPlayPauseSong"
+        android:layout_toRightOf="@+id/ivSongDisplay"
+        android:ellipsize="end"
+        android:fadingEdge="horizontal"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent.Title" />
+
+    <TextView
+        android:id="@+id/tvCustomNotificationContent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivSongDisplay"
+        android:layout_marginBottom="12.0dip"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="5.0dip"
+        android:layout_toLeftOf="@+id/ivPlayPauseSong"
+        android:layout_toRightOf="@+id/ivSongDisplay"
+        android:ellipsize="end"
+        android:fadingEdge="horizontal"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent" />
+
+</RelativeLayout>

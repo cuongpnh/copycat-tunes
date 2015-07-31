@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15.0dip"
+        android:layout_marginTop="0.0dip"
+        android:gravity="center" >
+
+        <ImageButton
+            android:id="@+id/btn_shuffle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15.0dip"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:onClick="onPlayerClick"
+            android:padding="15.0dip"
+            android:src="@drawable/np_shuffle_selector" />
+
+        <ImageButton
+            android:id="@+id/btn_prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:onClick="onPlayerClick"
+            android:src="@drawable/ic_player_prev" />
+
+        <ImageButton
+            android:id="@+id/btn_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-5.0dip"
+            android:layout_marginRight="-5.0dip"
+            android:background="@null"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:onClick="onPlayerClick"
+            android:src="@drawable/ic_player_play" />
+
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15.0dip"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:onClick="onPlayerClick"
+            android:src="@drawable/ic_player_next" />
+
+        <ImageButton
+            android:id="@+id/btn_repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:onClick="onPlayerClick"
+            android:padding="15.0dip"
+            android:src="@drawable/ic_player_repeat_off" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/playbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttons"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_list"
+        android:paddingRight="@dimen/margin_list" >
+
+        <TextView
+            android:id="@+id/tv_curent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inital_Time"
+            android:textColor="@color/text_list"
+            android:textSize="14.0sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seekbar_progress"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="3.0dip"
+            android:layout_weight="1.0"
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inital_Time"
+            android:textColor="@color/text_list"
+            android:textSize="14.0sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/faded"
+        android:layout_width="fill_parent"
+        android:layout_height="20.0dip"
+        android:layout_above="@+id/playbar"
+        android:layout_marginTop="-20.0dip"
+        android:background="@drawable/player_bg_fade_out" />
+
+</RelativeLayout>

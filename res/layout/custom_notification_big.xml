@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="128.0dip" >
+
+    <ImageView
+        android:id="@+id/ivSongDisplayBig"
+        android:layout_width="128.0dip"
+        android:layout_height="128.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/default_notif_thumb" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/ivSongDisplayBig"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/ivPrevSongBig"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:padding="5.0dip"
+            android:src="@drawable/pb_prev_selector" />
+
+        <ImageButton
+            android:id="@+id/ivPlayPauseSongBig"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:padding="5.0dip"
+            android:src="@drawable/pb_pause_selector" />
+
+        <ImageButton
+            android:id="@+id/ivNextSongBig"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:padding="5.0dip"
+            android:src="@drawable/pb_next_selector" />
+
+        <ImageView
+            android:layout_width="1.0px"
+            android:layout_height="32.0dip"
+            android:background="?android:dividerHorizontal"
+            android:contentDescription="@string/app_name" />
+
+        <ImageButton
+            android:id="@+id/ivStopSongBig"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:background="@drawable/selector"
+            android:contentDescription="@string/app_name"
+            android:paddingBottom="19.0dip"
+            android:paddingTop="19.0dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_notif_close"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="1.0px"
+        android:layout_above="@+id/buttons"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/ivSongDisplayBig"
+        android:background="?android:dividerHorizontal"
+        android:contentDescription="@string/app_name" />
+
+    <LinearLayout
+        android:id="@+id/textarea"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical"
+        android:layout_toRightOf="@+id/ivSongDisplayBig"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_list"
+        android:paddingTop="8.0dip" >
+
+        <TextView
+            android:id="@+id/tvCustomNotificationBigTitle"
+            style="@android:style/TextAppearance.StatusBar.EventContent.Title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:ellipsize="end"
+            android:fadingEdge="horizontal"
+            android:focusable="true"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tvCustomNotificationBigContent"
+            style="@android:style/TextAppearance.StatusBar.EventContent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:ellipsize="end"
+            android:fadingEdge="horizontal"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </LinearLayout>
+
+</RelativeLayout>

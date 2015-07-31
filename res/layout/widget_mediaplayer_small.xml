@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="@dimen/widget_margin" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/margin_widget_small"
+        android:background="@color/widget_bg"
+        android:paddingLeft="90.0dip" >
+
+        <TextView
+            android:id="@+id/tvWidgeSongTitleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="2.0dip"
+            android:singleLine="true"
+            android:text="@string/no_song_selected"
+            android:textColor="@color/widget_text_title"
+            android:textSize="15.0sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvWidgetSongArtistSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvWidgeSongTitleSmall"
+            android:layout_gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/widget_text_artist"
+            android:textSize="@dimen/text_list" />
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="30.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tvWidgetSongArtistSmall"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/ivWidgetSongShuffleSmall"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:paddingBottom="@dimen/margin_widget_small"
+                android:paddingTop="@dimen/margin_widget_small"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_widget_shuffle_off" />
+
+            <ImageButton
+                android:id="@+id/ivWidgetSongPrevSmall"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:paddingBottom="@dimen/margin_widget_small"
+                android:paddingTop="@dimen/margin_widget_small"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_widget_prev" />
+
+            <ImageButton
+                android:id="@+id/ivWidgetSongPlayPauseSmall"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:paddingBottom="@dimen/margin_widget_small"
+                android:paddingTop="@dimen/margin_widget_small"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_widget_pause" />
+
+            <ImageButton
+                android:id="@+id/ivWidgetSongNextSmall"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:paddingBottom="@dimen/margin_widget_small"
+                android:paddingTop="@dimen/margin_widget_small"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_widget_next" />
+
+            <ImageButton
+                android:id="@+id/ivWidgetSongRepeatSmall"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:paddingBottom="@dimen/margin_widget_small"
+                android:paddingTop="@dimen/margin_widget_small"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_widget_repeat_off" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivWidgetSongDisplaySmall"
+        android:layout_width="80.0dip"
+        android:src="@drawable/miniplayer_default_album_art"
+        android:layout_height="80.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_widget_small"
+        android:layout_marginLeft="@dimen/margin_widget_small"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY" />
+
+</RelativeLayout>
